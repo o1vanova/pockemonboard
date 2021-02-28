@@ -10,9 +10,8 @@ export class PockemonStore {
       pockemons: observable,
       getFavorited: computed,
       getByName: action,
+      initialize: action,
     });
-
-    this.initialize();
   }
 
   public get getFavorited(): PockemonModel[] {
@@ -27,7 +26,7 @@ export class PockemonStore {
     );
   }
 
-  private async initialize(): Promise<void> {
+  public async initialize(): Promise<void> {
     const result = await PockemonsApi.getAll();
     runInAction(() => {
       this.pockemons = result.map((value) => new PockemonModel(value));

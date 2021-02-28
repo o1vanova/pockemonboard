@@ -6,20 +6,28 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {PockemonStore} from './stores/PockemonStore';
 import {Provider} from 'mobx-react';
-import {View, Text} from 'react-native';
-
-const store = new PockemonStore();
+import AppNavigation from './navigation/AppNavigation';
 
 const App = () => {
+  const store = new PockemonStore();
+
+  useEffect(() => {
+    const init = async () => {
+      store.initialize();
+    };
+
+    init().finally(async () => {
+      console.log('The future loader has been hidden successfully');
+    });
+  }, [store]);
+
   return (
     <Provider store={store}>
-      <View>
-        <Text>Test</Text>
-      </View>
+      <AppNavigation />
     </Provider>
   );
 };
