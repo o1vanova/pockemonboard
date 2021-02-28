@@ -1,9 +1,13 @@
 # PockemonBoard
 A mobile application built using React Native
 
-## Demo
+## Screenshots
 
-Deploy of the project is located <strong>[here]</strong>
+<div>
+  <img src="https://user-images.githubusercontent.com/55236087/109431872-b129a680-7a19-11eb-9d45-cde6f9afa02d.png" width="300">
+  <img src="https://user-images.githubusercontent.com/55236087/109431951-082f7b80-7a1a-11eb-8bc2-f5b0aee82241.png" width="300">
+  <img src="https://user-images.githubusercontent.com/55236087/109432033-5a709c80-7a1a-11eb-923f-ae4010dcb40a.png" width="300">
+</div>
 <br>
 
 ## Available Scripts
